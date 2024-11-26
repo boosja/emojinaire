@@ -1,0 +1,16 @@
+{:source-paths
+ ["dev" "src" "test"]
+
+ :dependencies
+ [[cider/cider-nrepl "0.45.0"]
+  [no.cjohansen/replicant "0.2024.09.24"]
+  [datascript/datascript "1.6.3"]]
+
+ :compiler-options {:externs ["datascript/externs.js"]}
+
+ :dev-http {4200 "public"}
+
+ :builds
+ {:emojinaire
+  {:target :browser
+   :modules {:main {:init-fn emojinaire.dev/init}}}}}
